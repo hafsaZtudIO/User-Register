@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.register-box {
+  width: 100%;
+  padding: 30px;
+}
+
+h1 {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 44px;
+  color: darkslategray;
+}
+
+.register-area {
+  width: 720px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 26px 34px;
+  background: white;
+  padding: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 42px;
+  border: 2px solid cadetblue;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 250px;
+  height: 95px;
+  resize: none;
+}
+
+.side-info label {
+  font-size: 22px;
+}
+
+.money-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid cadetblue;
+  border-radius: 4px;
+  background: white;
+}
+
+.money-input span {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.money-input input {
+  border: 0;
+}
+
+.children-area {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.child-card {
+  border: 2px solid cadetblue;
+  border-radius: 8px;
+  padding: 18px;
+  background: aliceblue;
+}
+
+.child-card h3 {
+  margin: 0 0 18px;
+  color: darkslategray;
+  font-size: 24px;
+}
+
+.child-card label {
+  font-size: 18px;
+}
+
+button {
+  grid-column: 1 / 3;
+  justify-self: center;
+  min-width: 260px;
+  min-height: 58px;
+  border: none;
+  border-radius: 30px;
+  background: orange;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkorange;
+}
+
+.display-info {
+  grid-column: 1 / 3;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  background: white;
+}
+
+.display-info h2 {
+  margin: 18px 0 10px;
+  color: darkslategray;
+  text-decoration: underline;
+}
+
+.display-info h2:first-child {
+  margin-top: 0;
+}
+
+.display-info p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.submitted-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.result-card {
+  padding: 16px;
+  border: 2px solid cadetblue;
+  border-radius: 8px;
+  background: aliceblue;
+}
+
+.result-card h3 {
+  margin: 0 0 10px;
+  color: darkslategray;
+}
+
+@media (max-width: 650px) {
+  .register-area {
+    width: 100%;
+  }
+
+  .register-area,
+  .children-area,
+  .submitted-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .children-area,
+  button {
+    grid-column: 1;
+  }
+}

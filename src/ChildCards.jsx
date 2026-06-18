@@ -1,14 +1,14 @@
-function ChildCards(props) {
+function ChildCards({ title, name, dob, onNameChange, onDobChange }) {
   return (
     <div className="child-card">
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
 
       <label>
         Name:
         <input
           type="text"
-          value={props.name}
-          onChange={(event) => props.onNameChange(event.target.value)}
+          value={name}
+          onChange={(event) => onNameChange(event.target.value)}
         />
       </label>
 
@@ -16,8 +16,8 @@ function ChildCards(props) {
         DOB:
         <input
           type="date"
-          value={props.dob}
-          onChange={(event) => props.onDobChange(event.target.value)}
+          value={dob}
+          onChange={(event) => onDobChange(event.target.value)}
         />
       </label>
     </div>
